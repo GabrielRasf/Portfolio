@@ -1,0 +1,372 @@
+
+
+/* ============  Resets e Geral ============  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+p {
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+}
+
+/* ============  Var cor e fonte ============  */
+:root {
+  --primary-color: #353535;
+  --bg-color: #071118;
+  --text-color: #ffffff;
+  --secondary-color: #222;
+  --font-family-1: 'Baskervville-Regular', serif;
+  --font-family-2: 'Lato-Regular', sans-serif;
+  --font-family-base: 'Arial', sans-serif;
+}
+
+/* ============  Fontes  ============ */
+@font-face {
+  font-family: 'Baskervville-Regular';
+  src: url('assets/fonts/Baskervville-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+/* ============  Cabeçalho  ============ */
+header {
+  background: url('assets/images/img-1-blur.svg') no-repeat center center/cover;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  font-family: var(--font-family-1);
+  color: var(--text-color);
+  text-align: center;
+  position: relative;
+  transition: background-color 0.5s ease-in-out;
+}
+
+header .header-name {
+  max-width: 420px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.header-content .header-name h1 {
+  font-size: 66px;
+}
+
+/* ============ Menu cabeçalho ============  */
+
+.header-nav-body {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(7, 17, 24, 0.199); /* Fundo translúcido */
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(10px);
+
+}
+
+.header-nav-body .nav-body {
+  display: flex;
+  justify-content: space-between; /* Centraliza os itens horizontalmente */
+  width: 100%;
+}
+
+.header-nav-body .logo-body h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.header-nav-body .nav-body ul {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav-body .nav-body ul li {
+  display: flex;
+  align-items: center;
+}
+
+/*  ============ Corpo do site  ============ */
+
+body {
+  font-family: var(--font-family-base);
+  color: #dbcaa7;
+  background-color: var(--bg-color);
+}
+
+/*  ============ Main  ============ */
+
+main {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ============  Seções  ============ */
+
+section {
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  /* margin-top: 20px; */
+}
+
+/* ============  Seção about  ============ */
+
+/* .fundo-transparente-about {
+  background: url(images/img-1-blur.svg) no-repeat center center fixed;
+  background-size: cover;
+  grid-column: 1;
+  grid-row: 2;
+  box-shadow: inset 0 55px 55px #071118;
+  border-radius: 50%;
+  position: relative;
+  height: 100%; Ou altura fixa
+  border: none;
+} */
+
+.about {
+  height: 100vh;
+  background-color: var(--bg-color);
+  padding-bottom: 80px;
+}
+
+.content-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  gap: 10px;
+}
+
+.content-about h2:hover {
+  font-style: italic;
+}
+
+.about-h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-h2 h2 {
+  font-size: 6rem;
+}
+
+.about-text {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  text-align: right;
+  padding: 30px;
+}
+
+.div-linguagens {
+  padding-top: 20px;
+}
+
+.linguagens {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.li-padding {
+  padding-top: 20px;
+  display: block;
+}
+
+
+/* ============  Seção services  ============ */
+
+
+.services {
+  height: 100vh;
+  background-color: var(--bg-color);
+  padding-bottom: 80px;
+}
+
+.content-services {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.content-services h2 {
+  /* display: grid; */
+  align-self: center;
+  justify-content: center;
+  text-align: right;
+  grid-column: span 3;
+  /* grid-row: 1; */
+  font-size: 80px;
+}
+
+.content-services h2:hover {
+  font-style: italic;
+}
+
+.content-services h3 {
+  display: grid;
+  text-align: right;
+  justify-content: flex-end;
+  align-self: auto;
+  grid-column: 2;
+  grid-row: 1;
+  margin: 30px 0;
+}
+
+.portfolio-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.portfolio-1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.portfolio-1 img:hover {
+  padding: 10px;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* .service-card-1:hover {
+  transform: scale(1.05);
+} */
+
+
+
+/* ============  Seção contact  ============ */
+
+.contact {
+  height: 100vh;
+  background-color: var(--bg-color);
+  padding-bottom: 80px;
+}
+
+.content-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+
+
+/* ============  Botão ============  */
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/*  ============ Footer  ============ */
+footer {
+  background-color: var(--bg-color);
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+/*  ============ Responsividade ============  */
+@media (max-width: 768px) {
+  header .header-name h1 {
+    font-size: 2.5rem;
+  }
+
+  header .header-content p {
+    font-size: 1.2rem;
+  }
+
+  .header-nav .nav ul {
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .content-about, .content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .header-name h1 {
+    font-size: 2rem;
+  }
+
+  header .header-content p {
+    font-size: 1rem;
+  }
+
+  .header-nav .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 15px;
+    margin: 10px;
+  }
+}
